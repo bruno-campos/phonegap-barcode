@@ -50,7 +50,7 @@ var app = {
 
 
 function scan() {
-  alert("scan2");
+  alert("scan1 - 1");
   var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
   scanner.scan(
@@ -62,6 +62,22 @@ function scan() {
       },
       function (error) {
         alert("Scanning failed: " + error);
+      }
+  );
+}
+
+
+function scan2() {
+  alert("scan1 - 2");
+  window.plugins.barcodeScanner.scan(
+      function(result) {
+        if (result.cancelled)
+          alert("the user cancelled the scan")
+        else
+          alert("we got a barcode: " + result.text)
+      },
+      function(error) {
+        alert("scanning failed: " + error)
       }
   );
 }
