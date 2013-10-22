@@ -48,36 +48,36 @@ var app = {
     }
 };
 
-
-function scan() {
-  alert("scan1 - 1");
-  var scanner = cordova.require("cordova/plugin/BarcodeScanner");
-
-  scanner.scan(
-      function (result) {
-        alert("We got a barcode\n" +
-            "Result: " + result.text + "\n" +
-            "Format: " + result.format + "\n" +
-            "Cancelled: " + result.cancelled);
-      },
-      function (error) {
-        alert("Scanning failed: " + error);
-      }
-  );
-}
-
-
-function scan2() {
-  alert("scan1 - 2");
-  window.plugins.barcodeScanner.scan(
-      function(result) {
-        if (result.cancelled)
-          alert("the user cancelled the scan")
-        else
-          alert("we got a barcode: " + result.text)
-      },
-      function(error) {
-        alert("scanning failed: " + error)
-      }
-  );
-}
+//
+//function scan() {
+//  alert("scan1 - 1");
+//  var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+//
+//  scanner.scan(
+//      function (result) {
+//        alert("We got a barcode\n" +
+//            "Result: " + result.text + "\n" +
+//            "Format: " + result.format + "\n" +
+//            "Cancelled: " + result.cancelled);
+//      },
+//      function (error) {
+//        alert("Scanning failed: " + error);
+//      }
+//  );
+//}
+//
+//
+//function scan2() {
+//  alert("scan1 - 2");
+//  window.plugins.barcodeScanner.scan(
+//      function(result) {
+//        if (result.cancelled)
+//          alert("the user cancelled the scan")
+//        else
+//          alert("we got a barcode: " + result.text)
+//      },
+//      function(error) {
+//        alert("scanning failed: " + error)
+//      }
+//  );
+//}
